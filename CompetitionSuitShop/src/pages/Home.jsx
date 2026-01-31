@@ -187,10 +187,11 @@ export default function Home() {
           <div className="space-y-16">
             <StoryItem
               name="Kelsey Ahronson"
-              tagline="Became a coach"
+              tagline="Choosing healthy lifestyle"
               poster={poster1}
               productImg={img1}
               productName="Custom Pink Figure Suit"
+              subtext="Placement text, to place everywhere. Please change it later according to the context it is kept around."
             />
             <StoryItem
               name="Gissele Quezadq"
@@ -198,6 +199,17 @@ export default function Home() {
               poster={poster2}
               productImg={img2}
               productName="Custom Purple Bikini Suit"
+              subtext="Placement text, to place everywhere. Please change it later according to the context it is kept around."
+
+            />
+            <StoryItem
+              name="Sarah"
+              tagline="Balancing motherhood"
+              poster={poster3}
+              productImg={img4}
+              productName="Custom Green Wellness Suit"
+              subtext="Placement text, to place everywhere. Please change it later according to the context it is kept around."
+
             />
           </div>
         ) : (
@@ -491,7 +503,7 @@ export default function Home() {
   );
 }
 
-function StoryItem({ name, tagline, poster, productImg, productName }) {
+function StoryItem({ name, tagline, poster, productImg, productName,subtext }) {
   return (
     <div className="flex flex-col lg:flex-row items-center gap-12 max-w-4xl mx-auto">
       <div className="w-full lg:w-1/2 relative rounded-[40px] overflow-hidden shadow-2xl aspect-[3/5]">
@@ -513,7 +525,7 @@ function StoryItem({ name, tagline, poster, productImg, productName }) {
         <div className="bg-white border p-6 rounded-3xl relative">
           <h4 className="font-bold mb-2">{tagline}</h4>
           <p className="text-xs text-gray-400">
-            Placement text, to place everywhere.
+            {subtext}
           </p>
         </div>
         <div className="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border">
