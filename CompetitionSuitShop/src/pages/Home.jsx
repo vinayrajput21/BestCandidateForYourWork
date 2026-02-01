@@ -1,3 +1,4 @@
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import img1 from "../assets/sliders/Slider1.png";
@@ -537,7 +538,9 @@ function StoryItem({ name, tagline, poster, productImg, productName,subtext }) {
             />
             <div>
               <p className="text-xs font-bold">{productName}</p>
-              <button className="text-[10px] underline">View Product</button>
+              <Link to="/items" className="relative">
+               <button className="text-[10px] underline">View Product</button>
+              </Link>
             </div>
           </div>
           <span className="text-gray-400">›</span>
