@@ -5,7 +5,7 @@ import call from "../assets/icons/Vector.png";
 import Account from "../assets/icons/account.png";
 import Wishlist from "../assets/icons/wishlist.png";
 import ShoppingCart from "../assets/icons/Cart.png";
-import { Search, PhoneCall, Truck, ShieldCheck, Star, Menu, X } from "lucide-react"; // Added Menu and X
+import { Search, PhoneCall, Truck, Star, CreditCard, Menu, X } from "lucide-react"; // Added Menu and X
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -92,25 +92,47 @@ export default function Header() {
 
       {/* Trust Bar (Desktop Only usually, but kept conditional) */}
       {isCartPage && (
-        <div className="hidden md:block bg-gray-50/50 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center text-[11px] text-gray-500 uppercase tracking-wide">
-             <div className="flex items-center gap-3">
-               <PhoneCall size={18} className="text-gray-400" />
-               <div>
-                 <p className="font-bold text-gray-700">Customer Support 24/7</p>
-                 <p className="normal-case text-[10px]">Highest rated customer service</p>
-               </div>
-             </div>
-             {/* ... Other Trust items (keeping your existing logic) */}
-             <div className="flex items-center gap-3 border-l border-gray-200 pl-8">
-               <Truck size={20} className="text-gray-400" />
-               <div>
-                 <p className="font-bold text-gray-700">Free Shipping</p>
-                 <p className="normal-case text-[10px]">Free shipping worldwide!</p>
-               </div>
-             </div>
-          </div>
-        </div>
+        <div className="hidden md:block bg-gray-50/50 border-t border-b border-gray-100">
+  <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[11px] tracking-wide">
+    
+    {/* Customer Support */}
+    <div className="flex items-center gap-3">
+      <PhoneCall size={22} className="text-gray-400 stroke-[1.5]" />
+      <div className="flex flex-col">
+        <p className="font-bold text-gray-700 leading-tight">Customer Support 24/7</p>
+        <p className="text-gray-500 text-[10px]">Highest rated customer service</p>
+      </div>
+    </div>
+
+    {/* Free Shipping */}
+    <div className="flex items-center gap-3 border-l border-gray-200 pl-10">
+      <Truck size={24} className="text-gray-400 stroke-[1.5]" />
+      <div className="flex flex-col">
+        <p className="font-bold text-gray-700 leading-tight">Free Shipping</p>
+        <p className="text-gray-500 text-[10px]">Free shipping worldwide!</p>
+      </div>
+    </div>
+
+    {/* Secured Payments */}
+    <div className="flex items-center gap-3 border-l border-gray-200 pl-10">
+      <CreditCard size={22} className="text-gray-400 stroke-[1.5]" />
+      <div className="flex flex-col">
+        <p className="font-bold text-gray-700 leading-tight">Secured Payments</p>
+        <p className="text-gray-500 text-[10px]">100% secured payments</p>
+      </div>
+    </div>
+
+    {/* Athletes Love Our Suits */}
+    <div className="flex items-center gap-3 border-l border-gray-200 pl-10">
+      <Star size={22} className="text-gray-400 stroke-[1.5]" />
+      <div className="flex flex-col">
+        <p className="font-bold text-gray-700 leading-tight">Athletes Love Our Suits</p>
+        <p className="text-gray-500 text-[10px]">Experience our 5 stars service</p>
+      </div>
+    </div>
+
+  </div>
+</div>
       )}
 
       {/* Navigation & Search Bar (Desktop Only) */}
